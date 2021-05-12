@@ -1,0 +1,23 @@
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon--orange {
+    color: rgb(255, 187, 98);
+}
+
+.icon--black {
+    color: var(--color-black);
+}
+
+.icon--blue {
+    color: #324d68;
+}
+
+.icon--md {
+    width: 1.5rem;
+    height: 1.5rem;
+}

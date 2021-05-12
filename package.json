@@ -1,0 +1,18 @@
+{
+  "name": "start-project",
+  "version": "1.0.0",
+  "description": "starter project for new projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svgSprite": "svg-sprite-generate -d icons -o sprite.svg"
+  },
+  "author": "Ljiljana Antonic",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "svg-sprite-generator": "0.0.7"
+  }
+}

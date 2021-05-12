@@ -1,0 +1,31 @@
+.columns-wrap {
+    width: 100%;
+    float: left;
+    .col {
+        float: none;
+        display: inline-block;
+    }
+    .col-2 {
+        vertical-align: top;
+        width: 49%;
+        @media only screen and (min-width: $mobile-sm) and (max-width: $tablet-lg) {
+            width: 100%;
+        }
+    }
+    .col-3 {
+        width: 30%;
+        @media only screen and (min-width: $mobile-sm) and (max-width: $tablet-lg) {
+            width: 100%;
+        }
+    }
+    .col-4 {
+        vertical-align: top;
+        width: 20%;
+        @media only screen and (min-width: $tablet-sm) and (max-width: $tablet-lg) {
+            width: 40%;
+        }
+        @media only screen and (min-width: $mobile-sm) and (max-width: $mobile-lg) {
+            width: 100%;
+        } 
+    }
+}

@@ -1,0 +1,91 @@
+body, 
+div, 
+dl, dt, dd, ul, ol, li, 
+h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, 
+p, blockquote, th, td, img {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+input::placeholder {
+    font-size: 22px;
+    color: #8081ab;
+    @media only screen and (min-width: $mobile-sm) and (max-width: $tablet-lg) {
+        font-size: 16px;
+    }
+}
+
+.section {
+    width: 100%;
+    float: left;
+}
+
+.module {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.margin-top {
+    margin-block-start: 49px;
+}
+
+.margin-top-3 {
+    margin-block-start: 20px;
+}
+
+.margin-bottom {
+    @media only screen and (min-width: $mobile-sm) and (max-width: $tablet-lg) {
+        margin-block-end: 39px;
+    }
+}

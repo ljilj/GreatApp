@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>GreatApp</title>
+</head>
+<body>
+    <div style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="arrow-left" viewBox="0 0 50 50">
+            <path d="M18.4863 12.5391L8.69141 22.793C8.10547 23.3594 7.8125 24.1309 7.8125 24.9805C7.8125 25.8301 8.10547 26.5918 8.69141 27.168L18.4863 37.4609C19.6484 38.6816 21.543 38.6816 22.7051 37.4609C23.8672 36.2402 23.8672 34.2676 22.7051 33.0469L18.0078 28.125H39.1992C40.8496 28.125 42.1875 26.7285 42.1875 25C42.1875 23.2715 40.8496 21.875 39.1992 21.875H18.0078L22.7148 16.9531C23.877 15.7324 23.877 13.7598 22.7148 12.5391C21.543 11.3184 19.6582 11.3184 18.4863 12.5391Z"/>
+            
+            </symbol>
+            <symbol id="arrow-right" viewBox="0 0 50 50">
+            <path d="M31.5137 12.5391L41.3086 22.793C41.8945 23.3594 42.1875 24.1309 42.1875 24.9805C42.1875 25.8301 41.8945 26.5918 41.3086 27.168L31.5137 37.4609C30.3516 38.6816 28.457 38.6816 27.2949 37.4609C26.1328 36.2402 26.1328 34.2676 27.2949 33.0469L32.002 28.125H10.8105C9.15039 28.125 7.8125 26.7285 7.8125 25C7.8125 23.2715 9.15039 21.875 10.8008 21.875H31.9922L27.2852 16.9531C26.123 15.7324 26.123 13.7598 27.2852 12.5391C28.457 11.3184 30.3418 11.3184 31.5137 12.5391Z"/>
+            
+            </symbol>
+            <symbol id="device" viewBox="0 0 128 128">
+            <path d="M91 0H37C34.0826 0 31.2847 1.15893 29.2218 3.22183C27.1589 5.28473 26 8.08262 26 11V117C26 119.917 27.1589 122.715 29.2218 124.778C31.2847 126.841 34.0826 128 37 128H91C93.9174 128 96.7153 126.841 98.7782 124.778C100.841 122.715 102 119.917 102 117V11C102 8.08262 100.841 5.28473 98.7782 3.22183C96.7153 1.15893 93.9174 0 91 0V0ZM32 22.69H96V99.58H32V22.69ZM37 6H91C91.6566 6 92.3068 6.12933 92.9134 6.3806C93.52 6.63188 94.0712 7.00017 94.5355 7.46447C94.9998 7.92876 95.3681 8.47996 95.6194 9.08658C95.8707 9.69321 96 10.3434 96 11V16.69H32V11C32 9.67392 32.5268 8.40215 33.4645 7.46447C34.4021 6.52678 35.6739 6 37 6ZM91 122H37C35.6739 122 34.4021 121.473 33.4645 120.536C32.5268 119.598 32 118.326 32 117V105.58H96V117C96 117.657 95.8707 118.307 95.6194 118.913C95.3681 119.52 94.9998 120.071 94.5355 120.536C94.0712 121 93.52 121.368 92.9134 121.619C92.3068 121.871 91.6566 122 91 122Z"/>
+            <path d="M64 119.91C67.3137 119.91 70 117.224 70 113.91C70 110.596 67.3137 107.91 64 107.91C60.6863 107.91 58 110.596 58 113.91C58 117.224 60.6863 119.91 64 119.91Z"/>
+            <path d="M56.13 14.22H71.88C72.6756 14.22 73.4387 13.9039 74.0013 13.3413C74.5639 12.7787 74.88 12.0156 74.88 11.22C74.88 10.4243 74.5639 9.66126 74.0013 9.09865C73.4387 8.53604 72.6756 8.21997 71.88 8.21997H56.13C55.3344 8.21997 54.5713 8.53604 54.0087 9.09865C53.4461 9.66126 53.13 10.4243 53.13 11.22C53.13 12.0156 53.4461 12.7787 54.0087 13.3413C54.5713 13.9039 55.3344 14.22 56.13 14.22Z"/>
+            
+            </symbol>
+            <symbol id="facebook" viewBox="0 0 24 24">
+            <path d="M16.006 4.89903H18.006V1.51903C17.038 1.4183 16.0653 1.36857 15.092 1.37003C12.201 1.37003 10.224 3.13503 10.224 6.37003V9.15103H6.96002V12.935H10.224V22.63H14.136V12.936H17.389L17.878 9.15203H14.136V6.73803C14.136 5.62203 14.433 4.89903 16.006 4.89903Z"/>
+            
+            </symbol>
+            <symbol id="github" viewBox="0 0 32 32">
+            <g clip-path="url(#clip0)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.003 0C7.17 0 0.00799561 7.162 0.00799561 15.997C0.00799561 23.064 4.59 29.06 10.948 31.176C11.748 31.322 12 30.848 12 30.424C12 30.044 12.008 28.982 12 27.647C7.551 28.614 6.629 25.54 6.629 25.54C5.902 23.692 4.854 23.2 4.854 23.2C3.402 22.208 4.963 22.227 4.963 22.227C6.568 22.34 7.414 23.876 7.414 23.876C8.841 26.319 11.157 25.613 12.068 25.205C12.214 24.171 12.628 23.466 13.085 23.066C9.533 22.662 5.799 21.29 5.799 15.16C5.799 13.413 6.422 11.986 7.445 10.868C7.28 10.464 6.73 8.837 7.602 6.634C7.602 6.634 8.945 6.204 12 8.275C13.276 7.92 14.645 7.743 16.005 7.737C17.364 7.743 18.732 7.92 20.01 8.275C23.065 6.205 24.406 6.634 24.406 6.634C25.278 8.837 24.729 10.464 24.565 10.868C25.588 11.986 26.209 13.413 26.209 15.16C26.209 21.306 22.469 22.658 18.905 23.053C19.479 23.548 20 24.508 20 26C20 28 20 29.902 20 30.428C20 30.856 20.258 31.329 21.07 31.174C27.422 29.055 32 23.062 32 15.997C32 7.162 24.838 0 16.003 0Z"/>
+            </g>
+            <defs>
+            </defs>
+            
+            </symbol>
+            <symbol id="linkedin" viewBox="0 0 30 30">
+            <g clip-path="url(#clip0)">
+            <path d="M29.9925 30V29.9988H30V18.9963C30 13.6138 28.8412 9.46753 22.5487 9.46753C19.5237 9.46753 17.4937 11.1275 16.665 12.7013H16.5775V9.97003H10.6112V29.9988H16.8237V20.0813C16.8237 17.47 17.3187 14.945 20.5525 14.945C23.7387 14.945 23.7862 17.925 23.7862 20.2488V30H29.9925Z"/>
+            <path d="M0.494995 9.97119H6.715V29.9999H0.494995V9.97119Z"/>
+            <path d="M3.6025 0C1.61375 0 0 1.61375 0 3.6025C0 5.59125 1.61375 7.23875 3.6025 7.23875C5.59125 7.23875 7.205 5.59125 7.205 3.6025C7.20375 1.61375 5.59 0 3.6025 0V0Z"/>
+            </g>
+            <defs>
+            </defs>
+            
+            </symbol>
+            <symbol id="location" viewBox="0 0 28 40">
+            <path d="M14 0C6.27 0 0 6.27 0 14C0 24.5 14 40 14 40C14 40 28 24.5 28 14C28 6.27 21.73 0 14 0ZM14 19C11.24 19 9 16.76 9 14C9 11.24 11.24 9 14 9C16.76 9 19 11.24 19 14C19 16.76 16.76 19 14 19Z"/>
+            
+            </symbol>
+            <symbol id="menu" viewBox="0 0 32 32">
+            <path d="M4 10H28C29.104 10 30 9.104 30 8C30 6.896 29.104 6 28 6H4C2.896 6 2 6.896 2 8C2 9.104 2.896 10 4 10ZM28 14H4C2.896 14 2 14.896 2 16C2 17.104 2.896 18 4 18H28C29.104 18 30 17.104 30 16C30 14.896 29.104 14 28 14ZM28 22H4C2.896 22 2 22.896 2 24C2 25.104 2.896 26 4 26H28C29.104 26 30 25.104 30 24C30 22.896 29.104 22 28 22Z"/>
+            
+            </symbol>
+            <symbol id="ring" viewBox="0 0 25 30">
+            <path d="M23 26H1.00003C0.829562 25.9995 0.662059 25.9554 0.513425 25.8719C0.364791 25.7885 0.239961 25.6684 0.150789 25.5231C0.0616163 25.3778 0.0110625 25.2122 0.00392809 25.0419C-0.00320628 24.8715 0.0333158 24.7022 0.110026 24.55C1.34389 22.0631 1.99049 19.3262 2.00003 16.55V13C2.00003 10.3478 3.05359 7.8043 4.92896 5.92893C6.80432 4.05357 9.34786 3 12 3C14.6522 3 17.1957 4.05357 19.0711 5.92893C20.9465 7.8043 22 10.3478 22 13V16.53C22.0096 19.3062 22.6562 22.0431 23.89 24.53C23.9715 24.6829 24.0118 24.8544 24.007 25.0276C24.0022 25.2008 23.9525 25.3697 23.8628 25.5179C23.7731 25.6661 23.6464 25.7885 23.4951 25.873C23.3439 25.9575 23.1733 26.0013 23 26V26ZM2.55003 24H21.45C20.4964 21.6248 20.0043 19.0895 20 16.53V13C20 10.8783 19.1572 8.84344 17.6569 7.34315C16.1566 5.84285 14.1218 5 12 5C9.87829 5 7.84346 5.84285 6.34317 7.34315C4.84288 8.84344 4.00003 10.8783 4.00003 13V16.53C3.99575 19.0895 3.50364 21.6248 2.55003 24V24Z"/>
+            <path d="M12 30C10.6739 30 9.40215 29.4732 8.46447 28.5355C7.52678 27.5979 7 26.3261 7 25C7 24.7348 7.10536 24.4804 7.29289 24.2929C7.48043 24.1054 7.73478 24 8 24C8.26522 24 8.51957 24.1054 8.70711 24.2929C8.89464 24.4804 9 24.7348 9 25C9.0007 25.7954 9.31723 26.5579 9.88 27.12C10.4523 27.663 11.2111 27.9657 12 27.9657C12.7889 27.9657 13.5477 27.663 14.12 27.12C14.2132 27.0268 14.3239 26.9528 14.4458 26.9023C14.5676 26.8519 14.6981 26.8259 14.83 26.8259C14.9619 26.8259 15.0924 26.8519 15.2142 26.9023C15.3361 26.9528 15.4468 27.0268 15.54 27.12C15.6332 27.2132 15.7072 27.3239 15.7577 27.4458C15.8081 27.5676 15.8341 27.6981 15.8341 27.83C15.8341 27.9619 15.8081 28.0924 15.7577 28.2142C15.7072 28.3361 15.6332 28.4468 15.54 28.54C15.0748 29.004 14.5227 29.3718 13.9153 29.6223C13.3079 29.8728 12.657 30.0012 12 30Z"/>
+            <path d="M12 5C11.7348 5 11.4804 4.89464 11.2929 4.70711C11.1054 4.51957 11 4.26522 11 4V1C11 0.734784 11.1054 0.48043 11.2929 0.292893C11.4804 0.105357 11.7348 0 12 0C12.2652 0 12.5196 0.105357 12.7071 0.292893C12.8946 0.48043 13 0.734784 13 1V4C13 4.26522 12.8946 4.51957 12.7071 4.70711C12.5196 4.89464 12.2652 5 12 5Z"/>
+            
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 32 32">
+            <path d="M31.993 6.077C30.816 6.6 29.552 6.953 28.223 7.11C29.578 6.298 30.619 5.012 31.11 3.48C29.841 4.231 28.437 4.779 26.942 5.072C25.744 3.797 24.038 3 22.149 3C18.524 3 15.587 5.938 15.587 9.563C15.587 10.077 15.644 10.579 15.756 11.059C10.301 10.785 5.465 8.172 2.227 4.201C1.663 5.171 1.339 6.298 1.339 7.501C1.339 9.779 2.498 11.787 4.258 12.965C3.183 12.93 2.171 12.636 1.286 12.144C1.285 12.171 1.285 12.2 1.285 12.226C1.285 15.407 3.547 18.06 6.55 18.663C6 18.812 5.42 18.893 4.821 18.893C4.397 18.893 3.987 18.852 3.587 18.776C4.421 21.382 6.846 23.28 9.717 23.334C7.472 25.094 4.642 26.145 1.567 26.145C1.037 26.145 0.513999 26.114 0.000999451 26.053C2.905 27.913 6.355 29 10.062 29C22.134 29 28.737 18.999 28.737 10.325C28.737 10.041 28.729 9.757 28.717 9.475C30 8.55 31.112 7.395 31.993 6.077Z"/>
+            
+            </symbol></svg>
+    </div>
+    <!-- Top Nav -->
+    <div class="section">
+        <div class="module">
+            <div class="top-nav-container">
+                <div class="u-container u-px">
+                    <div class="top-nav d-flex">
+                        <div class="top-nav__left d-flex">
+                            <svg class="icon icon--orange">
+                                <use href="#location"/>
+                            </svg>
+                            <p class="u-color--white">Baker Street, London, 21 - UK</p>
+                        </div>
+                        <div class="top-nav__right d-flex">
+                            <div class="d-flex">
+                                <svg class="icon icon--orange">
+                                    <use href="#device"/>
+                                </svg>
+                                <p class="u-color--white">+00123456789</p>
+                            </div>
+                            <div class="d-flex">
+                                <svg class="icon icon--orange">
+                                    <use href="#ring"/>
+                                </svg>
+                                <p class="u-color--white">Open Time: All weeks 8:00 - 12:00</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Nav -->
+
+    <!-- Header -->
+    <header class="section header">
+        <nav class="nav__header u-container u-px d-flex">
+            <a class="nav__logo" href="#">
+                <img src="images/logo.png" alt="Great App Logo">
+            </a>
+            <button class="nav__toggle js-menu-toggle">
+                <svg class="icon icon--black">
+                    <use href="#menu"/>
+                </svg>
+            </button>
+            <div class="links__container d-flex">
+                <a href="#" class="text-center text-uppercase text-bold u-color--font-black">Home</a>
+                <a href="#" class="text-center text-uppercase text-bold u-color--font-black">About</a>
+                <a href="#" class="text-center text-uppercase text-bold u-color--font-black">Services</a>
+                <a href="#" class="text-center text-uppercase text-bold u-color--font-black">Blog</a>
+                <a href="#" class="text-center text-uppercase text-bold u-color--font-black">Contacts</a>
+                <button class="btn btn--orange text-uppercase">Request a Quote</button>
+            </div>
+        </nav>   
+    </header>
+    <!-- End Header -->
+
+    <!-- Hero Section -->
+    <section class="section">
+        <div class="module hero text-left">
+            <div class="u-container u-px">
+                <div class="columns-wrap columns-order">
+                    <div class="col col-2 order-2">
+                        <div class="hero-box">
+                            <h2>Your Business Development</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor <span>incididunt ut labore et dolore magna 
+                                aliqua, ut enim ad minim veniam, quis nostrud exercitation</span> 
+                            </p>
+                            <button class="u-color--white">Try Now</button>
+                        </div>
+                    </div>
+                    <div class="col col-2 order-1">
+                        <div class="hero-slider">
+                            <div class="slider">
+                                <div class="slide active">
+                                    <img src="images/slide-1.png" alt="Slide-1">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/slide-2.png" alt="Slide-2">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/slide-3.png" alt="Slide-3">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/slide-4.png" alt="Slide-4">
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <svg class="icon prev">
+                                    <use href="#arrow-left"/>
+                                </svg>
+                                <svg class="icon next">
+                                    <use href="#arrow-right"/>
+                                </svg>
+                            </div>
+                            <div class="indicator"></div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Company Section -->
+    <section class="section">
+        <div class="module company text-left">
+            <div class="u-container-md u-px">
+                <div class="columns-wrap">
+                    <div class="col col-2">
+                        <div class="company-img">
+                            <img src="images/company.png" alt="Company">
+                        </div>
+                    </div>
+                    <div class="col col-2 order-2">
+                        <div class="company-box">
+                            <h4 class="text-uppercase">Innovation. Passion. Creativity.</h4>
+                            <h2 class="text-uppercase"><span class="u-color--orange">Our</span> Company</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua. Quis ipsum su spendisse ultrices gravida. Risus 
+                                commodo viverra maec  enas accumsan lacus vel facilisis.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor. 
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Quis ipsum su spendisse ultrices gravida.
+                            </p>    
+                            <a class="u-color--grey-dark text-uppercase text-bold" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Company Section -->
+
+    <!-- Work Section -->
+    <section class="section">
+        <div class="module work text-center">
+            <div class="u-px">
+                <h2>Our work is <span class="u-color--purple">more than research</span></h2>
+                <p class="work-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt <span>ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam.</span> 
+                </p>
+                <div class="u-container">
+                    <div class="columns-wrap">
+                        <div class="col col-3">
+                            <div class="work-box margin-bottom">
+                                <img src="images/target-audience.png" alt="Target Audience">
+                                <h5>Awesome & Creative</h5>
+                                <p>Get your blood tests delivered at
+                                    home collect a sample from the
+                                    news your blood tests.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-3">
+                            <div class="work-box margin-bottom">
+                                <img src="images/megaphone.png" alt="Megaphone">
+                                <h5>Development Field</h5>
+                                <p>Get your blood tests delivered at
+                                    home collect a sample from the
+                                    news your blood tests.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-3">
+                            <div class="work-box">
+                                <img src="images/search.png" alt="Search">
+                                <h5>Incredible Team</h5>
+                                <p>Get your blood tests delivered at
+                                    home collect a sample from the
+                                    news your blood tests.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Work Section -->
+
+    <!-- History Section -->
+    <section class="section">
+        <div class="module history text-left">
+            <div class="u-container u-px">
+                <div class="columns-wrap columns-order">
+                    <div class="col col-2 order-2">
+                        <div class="history-box">
+                            <h4 class="text-uppercase">Elevate your financial <span>performances</span></h4>
+                            <h2 class="text-uppercase"><span class="u-color--orange">Our</span> History</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices 
+                                gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                            <a class="u-color--grey-dark text-uppercase text-bold" href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col col-2 order-1">
+                        <div class="history-img">
+                            <img src="images/history.png" alt="History">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End History Section -->
+
+    <!-- Creativity Section -->
+    <section class="section">
+        <div class="module creativity text-center">
+            <div class="u-container u-px">
+                <div class="creativity-box">
+                    <h4 class="text-uppercase">But not only for your performances</h4>
+                    <h2 class="text-uppercase u-color--orange">Creativity</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. 
+                        Risus commodo viverra maec  enas accumsan lacus vel facilisis.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <a class="u-color--grey-dark text-uppercase text-bold" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Creativity Section -->
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="module services text-center">
+            <div class="u-container-lg u-px">
+               <div class="services-box d-flex">
+                   <div class="services__title relative">
+                        <h2 class="text-uppercase absolute">What we <span>offer</span></h2>
+                   </div>
+                   <div class="services__content">
+                       <div class="img__box relative">
+                            <img class="img-computer absolute" src="images/computer.png" alt="Computer">
+                            <img class="img-bkg" src="images/background.png" alt="Background">
+                            <h3 class="u-color--white absolute">Why we best Consulting office in London?</h3>
+                            <p class="p-first u-color--white absolute">Rapid solutions to the most complex business challenges 
+                                with cooperative <span>process-driven.</span>
+                             </p>
+                             <p class="p-second u-color--white absolute">We are an elite team of consultants whose mission 
+                                 is maximize stakeholder value. From roadmap planning and 
+                                 solution implementation, to maintenance and support.
+                             </p>
+                             <img class="img-signature absolute" src="images/signature.png" alt="Signature">
+                             <button class="btn btn--orange text-uppercase absolute">See all services</button>
+                        </div>
+                        <p class="p-mobile">We are an elite team of consultants whose mission 
+                            is maximize stakeholder value. From roadmap planning and 
+                            solution implementation, to maintenance and support.
+                        </p>
+                        <button class="btn btn--orange text-uppercase btn-mobile">See all services</button>
+                   </div>
+               </div> 
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- Numbers Section -->
+    <div class="section">
+        <div class="module numbers text-center">
+            <div class="u-container-md u-px">
+                <div class="columns-wrap">
+                    <div class="col col-4">
+                        <div class="numbers-box">
+                            <span>7890</span>
+                            <p class="text-uppercase">Coffee cups</p>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <div class="numbers-box">
+                            <span>1M</span>
+                            <p class="text-uppercase">Subscribers</p>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <div class="numbers-box">
+                            <span>1509</span>
+                            <p class="text-uppercase">Customers</p>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <div class="numbers-box">
+                            <span>5972</span>
+                            <p class="text-uppercase">Purchases</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- End Numbers Section -->
+
+    <!-- Plan Section -->
+    <div class="section">
+        <div class="module plan text-center">
+            <div class="u-container u-px">
+                <div class="plan-box d-flex">
+                    <p class="u-color--white text-bold">Looking for a First-Class Business Plan Consultant?</p>
+                    <button class="u-color--blue-dark">Start Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Plan Section -->
+
+    <!-- Email Section -->
+    <section class="section">
+        <div class="module email text-left">
+            <div class="u-container u-px">
+                <div class="columns-wrap">
+                    <div class="col col-2">
+                        <div class="email-box">
+                            <h2>Ready<span class="text-bold"> to start?</span></h2>
+                            <p class="text-bold">Get a free financial plan</p>
+                        </div>
+                    </div>
+                    <div class="col col-2">
+                        <div class="email-input relative">
+                            <input type="email" placeholder="Your email">
+                            <a href="#" class="text-uppercase text-bold absolute">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Email Section -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="section">
+            <div class="module footer-top text-left u-bkg--blue">
+                <div class="u-container u-px">
+                    <div class="columns-wrap">
+                        <div class="col col-4 footer-col">
+                            <div class="footer-top-box">
+                                <a class="footer__logo" href="#">
+                                    <img src="images/logo.png" alt="Great App Logo">
+                                </a>
+                                <div class="footer-top-box__info">
+                                    <p class="text-bold u-color--font-grey">Tel:(00) 123456789</p> 
+                                    <p class="text-bold u-color--font-grey">Fax:(00) 12345678</p> 
+                                </div>
+                                <a class="text-bold u-color--font-grey" href="#">info@yourdomain.com</a>
+                                <div class="footer-top__icons">
+                                    <a href="#">
+                                        <svg class="icon icon--blue icon--md">
+                                            <use href="#linkedin"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="icon icon--blue icon--md">
+                                            <use href="#facebook"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="icon icon--blue icon--md">
+                                            <use href="#twitter"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="icon icon--blue icon--md">
+                                            <use href="#github"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-4 footer-col">
+                            <div class="footer-top-box">
+                                <a class="d-block text-bold u-color--font-grey" href="#">About us</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Blog</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Our Team</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Developers</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">CRM Solutions</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Online Help</a>
+                            </div>
+                        </div>
+                        <div class="col col-4 footer-col">
+                            <div class="footer-top-box">
+                                <a class="d-block text-bold u-color--font-grey" href="#">Services</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">How We Help</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Partners</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Where Are We</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">History</a>
+                            </div>
+                        </div>
+                        <div class="col col-4 footer-col">
+                            <div class="footer-top-box">
+                                <a class="d-block text-bold u-color--font-grey" href="#">Support</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Privacy Politics</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Support 24/7</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Get a Quote</a>
+                                <a class="d-block text-bold u-color--font-grey" href="#">Work With Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="footer-bottom u-bkg--grey">
+                <div class="footer-bottom-box u-container u-px d-flex">
+                    <div class="footer-bottom__left">
+                        <p class="u-color--white">&copy; 2020 You Company Copyright</p>
+                    </div>
+                    <div class="footer-bottom__right">
+                        <a class="u-color--white" href="#">Privacy</a>
+                        <a class="u-color--white" href="#">Accessibility</a>
+                        <a class="u-color--white" href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </footer>
+    <!-- Footer -->
+  
+    <script src="js/script.js"></script>
+</body>
+
+</html>
